@@ -1,28 +1,49 @@
+
 .home {
+
     header{
         display:flex;
         flex-direction:column;
 
-        .top-section{
-            border:1px solid red;
-            display: flex;
-            justify-content: center;
+        .top-div{
+            background: @red;
+        
+
+            .top-section{
+                display: flex;
+                justify-content: center;
+
+                    h1{
+                        font-size: 6rem;
+                    }
+                }
             }
         }
 
         section{display: flex;
         justify-content: center;
+        margin:3% 0;
 
     
     }
+        .text{
+            border-top: 2px solid black;
+        }
+
+        .content-top, .content-bottom{
+            display:flex;
+            flex-direction: row-reverse;
+        }
 
 
         img{
-            width:90%;
+            width:98%;
+            margin:1%;
             height:auto;
             border-radius: 15px;
         }
         
+
         
 
 }
