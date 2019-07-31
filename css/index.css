@@ -141,8 +141,11 @@ h2,
 h3,
 h4,
 h5,
-.btn {
+.btn,
+a,
+button {
   font-family: 'Saira Stencil One', cursive;
+  color: white;
 }
 h1 {
   font-size: 4rem;
@@ -155,10 +158,12 @@ h4 {
   font-size: 2.5rem;
   padding-bottom: 10px;
 }
-p {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
+  color: white;
 }
 img {
   max-width: 100%;
@@ -197,7 +202,7 @@ img {
   }
 }
 .navigation a:hover {
-  background: yellow;
+  background: gold;
   color: #ff0000;
 }
 .aboutNav {
@@ -212,7 +217,7 @@ img {
   font-weight: bold;
 }
 .aboutNav a:hover {
-  background: yellow;
+  background: gold;
   color: black;
 }
 footer {
@@ -224,12 +229,15 @@ footer p {
   color: #ff0000;
   padding: 10px;
 }
+body {
+  background-image: url("/img/Pokemon-World.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .home .home-header {
   display: flex;
   flex-direction: column;
-}
-.home .home-header .top-div {
-  background: black;
 }
 .home .home-header .top-div .top-section {
   display: flex;
@@ -271,12 +279,40 @@ footer p {
   }
 }
 .home .text {
-  border-top: 2px solid black;
+  width: 30%;
+}
+@media (max-width: 500px) {
+  .home .text {
+    width: 100%;
+  }
+}
+.home .text-top {
+  border-top: 2px solid gold;
+}
+.home .text-middle {
+  border-top: 2px solid #3482D4;
+}
+.home .text-bottom {
+  border-top: 2px solid #ff0000;
 }
 .home .content-top,
 .home .content-bottom {
   display: flex;
   flex-direction: row-reverse;
+}
+.home .content-top .img,
+.home .content-bottom .img,
+.home .content-top .img3,
+.home .content-bottom .img3 {
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .home .content-top .img,
+  .home .content-bottom .img,
+  .home .content-top .img3,
+  .home .content-bottom .img3 {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   .home .content-top,
@@ -285,7 +321,7 @@ footer p {
   }
 }
 .home img {
-  width: 98%;
+  width: 90%;
   margin: 1%;
   height: auto;
   border-radius: 15px;
@@ -298,10 +334,12 @@ footer p {
 }
 .home .btn {
   background: #ff0000;
+  color: gold;
   cursor: pointer;
   width: 200px;
   height: 40px;
   border-radius: 10px;
+  border: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -310,8 +348,23 @@ footer p {
   margin-left: 30%;
 }
 .home .btn:hover {
-  background: blue;
+  background: #3482D4;
   color: white;
+}
+.home .content-middle {
+  display: flex;
+  justify-content: center;
+}
+.home .content-middle .img2 {
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .home .content-middle .img2 {
+    width: 100%;
+  }
+}
+.home ul {
+  padding: 10px 0;
 }
 .aboutHeader {
   display: flex;
@@ -334,38 +387,51 @@ footer p {
 }
 .about-page h3 {
   font-size: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.about-page p {
+  display: flex;
+  justify-content: center;
 }
 .about-page .about-top {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-.about-page .about-top div {
+.about-page .about-top .insideDiv {
   margin: 10px;
   padding: 20px;
-  border-bottom: 1px dashed black;
+  border-bottom: 1px dashed white;
 }
 .about-page .about-middle {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-.about-page .about-middle div {
+.about-page .about-middle .insideDiv {
   margin: 10px;
   padding: 20px;
-  border-bottom: 1px dashed black;
+  border-bottom: 1px dashed white;
 }
 .about-page .about-bottom {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-.about-page .about-bottom div {
+.about-page .about-bottom .insideDiv {
   margin: 10px;
   padding: 20px;
+  border-bottom: 1px dashed white;
 }
-.about-page button {
+.about-page .divbutton {
+  display: flex;
+  justify-content: center;
+}
+.about-page button,
+.about-page .aboutBtn {
   background: gold;
+  color: black;
   cursor: pointer;
   width: 200px;
   height: 40px;
@@ -375,8 +441,10 @@ footer p {
   align-items: center;
   font-size: 20px;
   font-weight: bold;
+  text-decoration: none;
 }
-.about-page button:hover {
-  background: blue;
+.about-page button:hover,
+.about-page .aboutBtn:hover {
+  background: #3482D4;
   color: white;
 }

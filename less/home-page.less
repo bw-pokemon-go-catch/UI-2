@@ -1,3 +1,9 @@
+body{
+    background-image: url("/img/Pokemon-World.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 .home {
                          
@@ -6,7 +12,7 @@
         flex-direction:column;
 
         .top-div{
-            background: @black;
+            // background: @black;
         
 
             .top-section{
@@ -50,12 +56,36 @@
             }
         }
         .text{
-            border-top: 2px solid black;
+            width:30%;
+
+            @media @mobile{
+                width:100%;
+            }
+        }
+
+        .text-top{
+                border-top: 2px solid @gold;
+        }
+
+        .text-middle{
+            border-top: 2px solid @blue;
+        }
+
+        .text-bottom{
+            border-top: 2px solid @red;
         }
 
         .content-top, .content-bottom{
             display:flex;
             flex-direction: row-reverse;
+
+                .img, .img3{
+                    width:45%;
+
+                    @media @mobile{
+                        width:100%;
+                    }
+                }
 
                 @media @mobile{
                     flex-direction: column;            
@@ -63,7 +93,7 @@
         }
 
         img{
-            width:98%;
+            width:90%;
             margin:1%;
             height:auto;
             border-radius: 15px;
@@ -76,10 +106,12 @@
 
         .btn{
             background:@red;
+            color:@gold;
             cursor:pointer;
             width:200px;
             height:40px;
             border-radius:10px;
+            border:@black;
             display:flex;
             justify-content: center;
             align-items: center;
@@ -92,6 +124,23 @@
                 color:@white;
             }
 
+        }
+
+        .content-middle{
+            display: flex;
+            justify-content: center;
+
+            .img2{
+                width:45%;
+
+                @media @mobile{
+                    width:100%;
+                }
+            }
+        }
+
+        ul{
+            padding:10px 0;
         }
         
 }
@@ -124,17 +173,26 @@
 
     h3{
         font-size: 4rem;
+        display:flex;
+        justify-content: center;
     }
+
+    p{
+        display: flex;
+        justify-content: center;
+    }
+
+
     
     .about-top{
         display: flex;
         justify-content: center;
         flex-direction: row;
 
-        div{
+        .insideDiv{
             margin: 10px;
             padding:20px;
-            border-bottom: 1px dashed black;
+            border-bottom: 1px dashed @white;
           }
     }
 
@@ -143,26 +201,36 @@
         justify-content: center;
         flex-direction: row;
 
-        div{
+        .insideDiv{
             margin: 10px;
             padding:20px;
-            border-bottom: 1px dashed black;
+            border-bottom: 1px dashed @white;
+
+              }
           }
-    }
+
 
     .about-bottom{
         display: flex;
         justify-content: center;
         flex-direction: row;
 
-        div{
+        .insideDiv{
             margin: 10px;
             padding:20px;
-          }
+            border-bottom: 1px dashed @white;
+
+              }
     }
 
-    button{
+    .divbutton{
+        display: flex;
+        justify-content: center;
+    }
+
+    button, .aboutBtn{
             background:@gold;
+            color:@black;
             cursor:pointer;
             width:200px;
             height:40px;
@@ -171,7 +239,8 @@
             justify-content: center;
             align-items: center;
             font-size: 20px;
-            font-weight: bold;
+            font-weight:bold;
+            text-decoration: none;
 
             &:hover{
                 background:@blue;
@@ -179,7 +248,4 @@
             }
         }
 
-
-
-
-}
+}    
