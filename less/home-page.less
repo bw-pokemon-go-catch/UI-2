@@ -12,13 +12,9 @@ body{
         flex-direction:column;
 
         .top-div{
-            // background: @black;
-        
 
             .top-section{
                 display: flex;
-                justify-content: center;
-                align-items: center;
 
                 @media @mobile{
                     flex-direction: column;
@@ -27,25 +23,30 @@ body{
 
                     .logo{
                         width: 5%;
+
                         @media @mobile{
                             display: none;
                         }
+                    }
                     }
 
                     h1{
                         font-size: 6rem;
                         color: @red;
 
+
                         @media @mobile{
                             padding:0 30px;
                             margin: 5% 0;
                             font-size: 4rem;
+                            margin-left:20%;
+                            
                         }
                     }
 
                     }
                 }
-            }
+    
 
         section{display: flex;
         justify-content: center;
@@ -104,8 +105,12 @@ body{
             }
         }
 
-        .btn{
-            background:@red;
+        a{
+            text-decoration: none;
+        }
+
+        button{
+            background:@button;
             color:@gold;
             cursor:pointer;
             width:200px;
